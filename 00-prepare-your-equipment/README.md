@@ -4,7 +4,7 @@
 Before you set off on your adventure to master Grafana Cloud, you need to ensure your gear is ready. In this step, you'll install VirtualBox and set up an Ubuntu virtual machine that you'll use in the remaining lab exercises.
 
 > **🪄 Protip:**
-> If you already have an Ubuntu Linux VM or cloud instance, you can use that instead of Virtualbox. [Skip straight to the first challenge](../01-the-journey-begins/README.md) if you already have Ubuntu installed and ready.
+> If you already have an Ubuntu Linux VM or cloud instance, you can use that instead of Virtualbox. Skip straight to [The First Trial](../02-the-first-trial/README.md) if you already have Ubuntu installed and ready.
 
 ## System Requirements
 
