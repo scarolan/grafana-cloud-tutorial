@@ -143,4 +143,4 @@ Before you set off on your adventure to master Grafana Cloud, you need to ensure
 
 With your Ubuntu virtual machine up and running, you're now fully prepared to embark on your Grafana Cloud quest.
 
-Head over to the next step in the adventure -- [The First Trial](../02-the-first-trial/README.md) -- to start building your first weather dashboard!
+Head over to the next step in the adventure -- [The First Trial](../02-the-first-trial/README.md) -- to learn how to monitor a Linux VM.
