@@ -13,13 +13,13 @@ This is a fun and interactive journey where you’ll learn how to:
 
 Grab your gear, and let's begin!
 
-## System Requirements
+## System Requirements 📃
 
 - Grafana Cloud Account
 - A modern browser (Chrome, Firefox, Edge, or Safari)
 - A National Weather Service API Gridpoint URL (we’ll help you find it!)
 
-## Step 1: Sign up for Grafana Cloud
+## Step 1: Sign up for Grafana Cloud ☁️
 
 Your first task is to sign up for a free Grafana Cloud account.
 
@@ -37,17 +37,17 @@ Your first task is to sign up for a free Grafana Cloud account.
 ![alt text](../images/grafana_cloud_stack_region.png)
 
 5. Wait a few minutes while your stack provisions. Now would be a good time to get up an stretch or get yourself a warm beverage ☕.
-6. Once your stack is provisioned log in and bookmark your URL. Congratulations, you have a free Grafana Cloud account!
+6. Once your stack is provisioned log in and bookmark your URL. Congratulations, you have your own Grafana Cloud stack!
 
-## Step 2: Enable the Infinity Plugin and Datasource
+## Step 2: Enable the Infinity Plugin and Datasource ♾️
 
-Next, you’ll enable a plugin that will help us pull in weather data from an external API (yes, you’re about to summon data from the heavens).
+Next, you’ll enable a plugin that will help us pull in weather data from the US National Weather Service API.
 
 1. In your Grafana instance, click on the **Connections >> Add New Connection** menu option on the left sidebar.
 
 ![alt text](../images/grafana_cloud_add_new_connection.png)
 
-1. Search for **Infinity** and click on the Infinity Data source.
+2. Search for **Infinity** and click on the Infinity Data source.
 
 ![alt text](../images/grafana_cloud_search_for_infinity.png)
 
@@ -75,17 +75,33 @@ Next, you’ll enable a plugin that will help us pull in weather data from an ex
 
 ![alt text](../images/grafana_cloud_installed_infinity_datasource.png)
 
-## Step 3: Import the Weather Dashboard
+## Step 3: Import the Weather Dashboard 📝
 
-Now that your Infinity datasource is ready, it's time to import the weather dashboard.
+Now that your Infinity data source is ready, it's time to import the weather dashboard.
 
 1. Go to the **Dashboards** (four-square icon) on the left sidebar.
+
+![alt text](../images/grafana_cloud_dashboards.png)
+
 2. Click on **Import** at the top.
-3. Upload the `weather-forecast.json` file that you can find in the 01-the-journey-begins folder of this repository.
-4. During the import process, you will be prompted to select a data source. Choose the Infinity datasource that you just created.
+
+![alt text](../images/grafana_cloud_import_dashboard.png)
+
+3. Upload the [weather-forecast.json](./weather-forecast.json) file that you can find in the 01-the-journey-begins folder of this repository. You may copy and paste the JSON or upload the entire file.
+
+![alt text](../images/grafana_cloud_copypasta_json.png)
+
+4. During the import process, you will be prompted to select a data source. Choose the Infinity data source that you just created.
+
+![alt text](../images/grafana_cloud_select_datasource.png)
+
 5. Click **Import** to load the dashboard.
 
-## Step 4: Get Your Weather API URL
+6. Great work, now you have the default weather dashboard for New York City.
+
+![alt text](../images/grafana_cloud_nyc_weather_dashboard.png)
+
+## Step 4: Get Your Weather API URL ⚙️
 
 To make the weather dashboard work for your location, you need a special URL from the [National Weather Service](https://www.weather.gov/documentation/services-web-api). To find your URL you'll need to know your latitude and longitude.
 
@@ -118,7 +134,7 @@ https://api.weather.gov/points/42.5704,-73.6885
 
 5. Copy the forecast URL for the next step.
 
-## Step 5: Update the Dashboard with Your Weather URL
+## Step 5: Update the Dashboard with Your Weather URL 🗺️
 
 Now that you have your gridpoint URL, let's update the dashboard to use it.
 
@@ -129,11 +145,11 @@ Now that you have your gridpoint URL, let's update the dashboard to use it.
 
 3. Notice how the weather forecast changes once you paste in the new URL.
 
-## Step 6: Customize  and Save Your Dashboard
+## Step 6: Customize and Save Your Dashboard 💾
 
 Next we'll rename the forecast panel on the dashboard.
 
-1. Use the triple dot menu on the panel to select the **Edit** option.
+1. Use the triple dot menu on the top right corner of the panel to select the **Edit** option.
 
 ![alt text](../images/grafana_cloud_edit_panel.png)
 
@@ -158,7 +174,7 @@ Next we'll rename the forecast panel on the dashboard.
 ![alt text](../images/grafana_cloud_area_51_weather.png)
 
 
-## Step 7: Save and Celebrate
+## Step 7: Save and Celebrate 🍾
 
 You’ve completed your first challenge! Now, any time you want to check the weather, your magical forecast dashboard is just a click away.
 
@@ -169,4 +185,10 @@ Congratulations, hero! You’ve learned how to:
 - Import and customize a dashboard.
 - Use the National Weather Service API to pull in live data.
 
-Your journey is just beginning. Next up, you'll face your first true trial: **monitoring a Linux server**. Ready to take on the next challenge? Head over to **02: The First Trial** when you're ready!
+Your journey is just beginning. Next up, you'll face your first true trial: **monitoring a Linux server**. 
+
+Ready to take on the next challenge?
+
+If you have an Ubuntu Linux VM, head over to [**02: The First Trial**](../02-the-first-trial/README.md) when you're ready!
+
+If you don't have an Ubuntu VM or cloud instance, visit [**00: Prepare Your Equipment**](../00-prepare-your-equipment/README.md) to set up Virtualbox.
