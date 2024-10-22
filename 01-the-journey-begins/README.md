@@ -1,14 +1,14 @@
 # The Journey Begins
 ![Pack your umbrella!](../images/weather_wizard.webp)
 
-Welcome to the first step of your Grafana Cloud adventure! In this chapter, you'll be setting up a weather forecast dashboard that you can check any time to keep an eye on the skies. Think of this as your magical artifact—only instead of conjuring storms, you'll be predicting them. Here's how your weather forecast will look when it's done. The dashboard is optimized for viewing on a mobile devices so you can check the forecast on your phone.
+Welcome to the first step of your Grafana Cloud adventure! In this chapter, you'll be setting up a weather forecast dashboard that you can check any time to keep an eye on the skies. Think of this as your magical artifact—only instead of conjuring storms, you'll be predicting them. Here's how your weather forecast will look when it's done. The dashboard is optimized for viewing on mobile devices so you can check the forecast on your phone.
 
 ![Screenshot of the default forecast panel for New York City](../images/grafana_cloud_nyc_weather_panel.png)
 
 This is a fun and interactive journey where you’ll:
 
 1. Sign up for Grafana Cloud.
-2. Enable the Infinity plugin and datasource.
+2. Enable the Infinity plugin and data source.
 3. Import a pre-configured weather dashboard.
 4. Use the National Weather Service API to pull in your local weather forecast.
 5. Customize your dashboard to make it uniquely yours.
@@ -45,7 +45,7 @@ Your first task is to sign up for a free Grafana Cloud account.
 > 
 > Bookmark your stack's URL for quick and easy reference later. Your stack URL looks like this: https://YOURSTACKNAME.grafana.net
 
-## Step 2: Enable the Infinity Plugin and Datasource ♾️
+## Step 2: Enable the Infinity Plugin and Data Source ♾️
 
 Next, you’ll enable a plugin that will help us pull in weather data from the US National Weather Service API.
 
@@ -53,15 +53,15 @@ Next, you’ll enable a plugin that will help us pull in weather data from the U
 
 ![Screenshot of the add new connection button](../images/grafana_cloud_add_new_connection.png)
 
-2. Search for **Infinity** and click on the Infinity Data source.
+2. Search for **Infinity** and click on the Infinity data source.
 
 ![Screenshot of the Infinity plugin](../images/grafana_cloud_search_for_infinity.png)
 
-3. Click on the **Install** button to install the Infinity Data source.
+3. Click on the **Install** button to install the Infinity data source.
 
 ![Screenshot of the Install button](../images/grafana_cloud_install_button.png)
 
-4. It may take a couple of minutes for the Infinity Data source to become visible. Click on the **Connections >> Data sources** link on the left menu. 
+4. It may take a couple of minutes for the Infinity data source to become visible. Click on the **Connections >> Data sources** link on the left menu. 
 
 ![Screenshot of Grafana Cloud data sources](../images/grafana_cloud_data_sources.png)
 
@@ -193,7 +193,7 @@ You’ve completed your first challenge! Now, any time you want to check the wea
 Congratulations, hero! You’ve learned how to:
 
 - Sign up for Grafana Cloud.
-- Enable a plugin and set up a datasource.
+- Enable a plugin and set up a data source.
 - Import and customize a dashboard.
 - Use the National Weather Service API to pull in live data.
 
