@@ -74,7 +74,7 @@ Before you set off on your adventure to master Grafana Cloud, you need to ensure
 1. **Open VirtualBox**:
    - Click on the "New" button in the VirtualBox Manager.
 
-![alt text](../images/virtualbox_create_a_vm.png)
+![Screenshot of the Virtualbox UI](../images/virtualbox_create_a_vm.png)
 
 2. **Configure Your VM**:
    - **Name**: Choose a name for your virtual machine (e.g., "Ubuntu 24.04").
@@ -82,7 +82,7 @@ Before you set off on your adventure to master Grafana Cloud, you need to ensure
    - **ISO Image**: Browse to the ISO file you downloaded in step 1. It's probably in your Downloads folder unless you saved it somewhere else.
    - Leave the grayed-out options as their defaults and click **Next**.
 
-![alt text](../images/virtualbox_vm_name_and_os.png)
+![Screenshot of the VM name and OS settings](../images/virtualbox_vm_name_and_os.png)
 
 3. **Unattended Guest Install Setup**:
    - Fill in a username and password, hostname and domain name for your VM.
@@ -90,12 +90,12 @@ Before you set off on your adventure to master Grafana Cloud, you need to ensure
    - Check the 'Install in Background' box
    - Check the 'Guest Additions' box.
 
-![alt text](../images/virtualbox_ubuntu_settings.png)
+![Screenshot of the Ubuntu settings](../images/virtualbox_ubuntu_settings.png)
 
 4. **Hardware Settings:**
    - The defaults here are 2048MB RAM and 1 processor. These are fine so simply click **Next** to proceed.
 
-![alt text](../images/virtualbox_ram_and_cpu.png)
+![screenshot of the RAM and CPU settings](../images/virtualbox_ram_and_cpu.png)
 
 5. **Create a Virtual Hard Disk**:
    - Select "Create a virtual hard disk now" and click "Create."
@@ -104,32 +104,32 @@ Before you set off on your adventure to master Grafana Cloud, you need to ensure
    - Set a disk size of **10GB** (9.99GB) and click "Create." The slider may not let you select exactly 10GB, but that's fine.
    - Do not select **Pre-allocate Full Size**. Leave it unchecked.
 
-![alt text](../images/virtualbox_hard_disk.png)
+![Screenshot of the hard disk settings](../images/virtualbox_hard_disk.png)
 
 6. **Summary Review**:
    - Look over your settings and make sure they look like the snapshot below, then click on **Finish** to kick off the installation.
 
-![alt text](../images/virtualbox_review_settings.png)
+![Screenshot of the review VM settings page](../images/virtualbox_review_settings.png)
 
 7. **"Unattended" Installation**:
    - Unfortunately the 'unattended' option for installation is not working as of this writing. So you'll need to click through a bunch of options screens and choose your username and password again. Use the **TAB** key on your keyboard to work your way through the text-based installer, using default settings all the way through.
 
-![alt text](../images/virtualbox_ubuntu_choose_language.png)
+![Screenshot of the choose language options in the terminal](../images/virtualbox_ubuntu_choose_language.png)
 
-![alt text](../images/virtualbox_manual_installer.png)
+![Screenshot of the Ubuntu manual installer for the command line](../images/virtualbox_manual_installer.png)
 
 > **📝 Note**
 > Don't worry about this scary message about 'destructive' action. It's trying to tell you it will format a virtual disk file for your VM, not wipe your laptop!
 
-![alt text](../images/virtualbox_confirm_destructive_action.png)
+![Screenshot of the destructive action warning shown before formatting the virtual disk](../images/virtualbox_confirm_destructive_action.png)
 
   - When you reach the SSH Configuration page, check the box for **Install OpenSSH server**. This is so you can connect to your virtual machine from the command line or with an SSH client like PuTTY. Tab your way down to the **Done** button and hit Enter to continue. After this step the installation should complete on its own. It may take 30-45 minutes for the installation process to complete so you can take a break or work on other things while it runs.
 
-![alt text](../images/virtualbox_install_ssh_server.png)
+![Screenshot of the SSH server installation option](../images/virtualbox_install_ssh_server.png)
 
   - Almost done! Once your machine reboots and you see a login prompt there's one last configuration change you need to make. In the Virtualbox settings for your VM, select the **Network** section and change the **Attached to:** to "Host-only Adapter". This will allow you to connect to your VM via SSH without exposing it on the local network. Reboot the VM after you complete this step.
 
-![alt text](../images/virtualbox_host_only_network.png)
+![Screenshot of the Host Only Network setting](../images/virtualbox_host_only_network.png)
 
   - Once your machine reboots, click inside the Virtualbox console window for it and log on with your username and password. Type the following command: `ip addr`. This will reveal the private, host-only IP address of your VM. Write it down as you'll use it in the labs to SSH onto your machine. Your IP address will look similar to this: `192.168.56.101`.
 
