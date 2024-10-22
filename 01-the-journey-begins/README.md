@@ -3,6 +3,8 @@
 
 Welcome to the first step of your Grafana Cloud adventure! In this chapter, you'll be setting up a weather forecast dashboard that you can check any time to keep an eye on the skies. Think of this as your magical artifact—only instead of conjuring storms, you'll be predicting them.
 
+![Screenshot of the default forecast panel for New York City](../images/grafana_cloud_nyc_weather_panel.png)
+
 This is a fun and interactive journey where you’ll:
 
 1. Sign up for Grafana Cloud.
