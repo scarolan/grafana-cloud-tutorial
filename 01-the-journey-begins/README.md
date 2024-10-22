@@ -1,7 +1,7 @@
 # The Journey Begins
 ![Pack your umbrella!](../images/weather_wizard.webp)
 
-Welcome to the first step of your Grafana Cloud adventure! In this chapter, you'll be setting up a weather forecast dashboard that you can check any time to keep an eye on the skies. Think of this as your magical artifact—only instead of conjuring storms, you'll be predicting them.
+Welcome to the first step of your Grafana Cloud adventure! In this chapter, you'll be setting up a weather forecast dashboard that you can check any time to keep an eye on the skies. Think of this as your magical artifact—only instead of conjuring storms, you'll be predicting them. Here's how your weather forecast will look when it's done. The dashboard is optimized for viewing on a mobile devices so you can check the forecast on your phone.
 
 ![Screenshot of the default forecast panel for New York City](../images/grafana_cloud_nyc_weather_panel.png)
 
@@ -49,7 +49,7 @@ Your first task is to sign up for a free Grafana Cloud account.
 
 Next, you’ll enable a plugin that will help us pull in weather data from the US National Weather Service API.
 
-1. In your Grafana instance, click on the **Connections >> Add New Connection** menu option on the left sidebar.
+1. In your Grafana Cloud stack, click on the **Connections >> Add New Connection** menu option on the left sidebar.
 
 ![Screenshot of the add new connection button](../images/grafana_cloud_add_new_connection.png)
 
@@ -73,11 +73,11 @@ Next, you’ll enable a plugin that will help us pull in weather data from the U
 
 ![Screenshot of the Infinity data source](../images/grafana_cloud_add_new_datasource_2.png)
 
-1. You'll see a popup notification once the data source has been correctly added. 
+7. You'll see a popup notification once the data source has been correctly added. 
 
 ![Screenshot of the popup notification for adding a data source successfully](../images/grafana_cloud_datasource_added.png)
 
-1. Leave the default name `yesoreyeram-infinity-datasource` for your data source. You may click **Save and Test** if you wish.
+8. Leave the default name `yesoreyeram-infinity-datasource` for your data source. You may click **Save and Test** if you wish.
 
 ![Screenshot of the default settings for the Infinity data source](../images/grafana_cloud_installed_infinity_datasource.png)
 
@@ -89,11 +89,11 @@ Now that your Infinity data source is ready, it's time to import the weather das
 
 ![Screenshot of the Grafana Cloud Dashboards link](../images/grafana_cloud_dashboards.png)
 
-1. Click on **Import** at the top.
+2. Click on **Import** at the top.
 
 ![Screenshot of the Grafana Cloud Import Dashboard button](../images/grafana_cloud_import_dashboard.png)
 
-1. Upload the [weather-forecast.json](./weather-forecast.json) file that you can find in the 01-the-journey-begins folder of this repository. You may copy and paste the JSON or upload the entire file.
+3. Upload the [weather-forecast.json](./weather-forecast.json) file that you can find in the 01-the-journey-begins folder of this repository. You may copy and paste the JSON or upload the entire file.
 
 ![Screenshot of the Grafana Cloud JSON for the weather dashboard](../images/grafana_cloud_copypasta_json.png)
 
@@ -101,11 +101,13 @@ Now that your Infinity data source is ready, it's time to import the weather das
 
 ![Screenshot of the select data source pulldown](../images/grafana_cloud_select_datasource.png)
 
-1. Click **Import** to load the dashboard.
+5. Click **Import** to load the dashboard.
 
-2. Great work, now you have the default weather forecast dashboard for New York City.
+6. Great work, now you have the default weather forecast dashboard for New York City.
 
 ![Screenshot of the default forecast panel for New York City](../images/grafana_cloud_nyc_weather_dashboard.png)
+
+The URL at the top can be changed to show the weather forecast in any part of the United States. In the next step you'll find your local station URL and update the dashboard.
 
 ## Step 4: Get Your Weather API URL ⚙️
 
@@ -150,7 +152,7 @@ Now that you have your gridpoint URL, let's update the dashboard to use it.
 
 ![Screenshot of the Grafana Cloud forecast URL variable text box](../images/grafana_cloud_paste_weather_url.png)
 
-1. Notice how the weather forecast changes once you paste in the new URL.
+3. Notice how the weather forecast changes once you paste in the new URL.
 
 ## Step 6: Customize and Save Your Dashboard 💾
 
@@ -164,15 +166,15 @@ Next we'll rename the forecast panel on the dashboard.
 
 ![Screenshot of the Grafana Cloud panel being renamed](../images/grafana_cloud_rename_panel.png)
 
-1. Save the dashboard with the button at the top of the page.
+3. Save the dashboard with the button at the top of the page.
 
 ![Screenshot of the Grafana Cloud save dashboard button](../images/grafana_cloud_save_dashboard.png)
 
-1. Add a note and make sure you select the checkbox to update your forecast default location.
+4. Add a note and make sure you select the checkbox to update your forecast default location.
 
 ![Screenshot of the Save Dashboard options, including a checkbox for default variable setting](../images/grafana_cloud_save_dashboard_2.png)
 
-1. Use the "Back to Dashboard" button to return to the dashboard view.
+5. Use the "Back to Dashboard" button to return to the dashboard view.
 
 ![Screenshot of the Back to Dashboard link](../images/grafana_cloud_back_to_dashboard.png)
 
