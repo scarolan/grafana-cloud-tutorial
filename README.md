@@ -1,4 +1,4 @@
-# Grafana Cloud Tutorial - Build a Weather Dashboard
+# Build a Mobile Weather Dashboard
 ![alt text](images/cloud_adventure.webp)
 
 # Grafana Cloud Adventure: A Hero's Journey
