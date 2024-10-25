@@ -1,7 +1,6 @@
-# Build a Mobile Weather Dashboard
+# Grafana Cloud Adventure: A Hero's Journey
 ![alt text](images/cloud_adventure.webp)
 
-# Grafana Cloud Adventure: A Hero's Journey
 Welcome, brave adventurer, to the Grafana Cloud tutorial series! Your quest is one of great importance—to master the art of observability and unlock the power of Grafana Cloud. Along the way, you'll face challenges, defeat monsters (ahem, Linux logs), and emerge victorious with dashboards that would make any wizard jealous.
 
 Prepare yourself for a quest filled with valuable insights, powerful tools, and, of course, some fun along the way.
