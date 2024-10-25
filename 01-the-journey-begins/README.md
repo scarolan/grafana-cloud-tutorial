@@ -1,4 +1,4 @@
-# The Journey Begins
+# The Journey Begins - Your First Dashboard
 ![Pack your umbrella!](../images/weather_wizard.webp)
 
 Welcome to the first step of your Grafana Cloud adventure! In this chapter, you'll be setting up a weather forecast dashboard that you can check any time to keep an eye on the skies. Think of this as your magical artifact—only instead of conjuring storms, you'll be predicting them. Here's how your weather forecast will look when it's done. The dashboard is optimized for viewing on mobile devices so you can check the forecast on your phone.
