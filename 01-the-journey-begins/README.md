@@ -113,7 +113,7 @@ The URL at the top can be changed to show the weather forecast in any part of th
 
 To make the weather dashboard work for your location, you need a special URL from the [National Weather Service](https://www.weather.gov/documentation/services-web-api). To find your URL you'll need to know your latitude and longitude.
 
-1. Visit [maps.google.com](maps.google.com) and search for your location (or wherever you want your weather forecast). Right click on the location you want and you'll see a popup with the latitude and longitude. Click on the latitude and longitude to copy it to your clipboard.
+1. Visit [maps.google.com](https://maps.google.com) and search for your location (or wherever you want your weather forecast). Right click on the location you want and you'll see a popup with the latitude and longitude. Click on the latitude and longitude to copy it to your clipboard.
 
 ![Screenshot of Area 51 on Google Maps](../images/google_maps_get_lat_long.png)
 
