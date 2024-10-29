@@ -1,4 +1,4 @@
-# The Journey Begins
+# The Journey Begins - Mobile Weather Dashboard
 ![Pack your umbrella!](../images/weather_wizard.webp)
 
 Welcome to the first step of your Grafana Cloud adventure! In this chapter, you'll be setting up a weather forecast dashboard that you can check any time to keep an eye on the skies. Think of this as your magical artifact—only instead of conjuring storms, you'll be predicting them. Here's how your weather forecast will look when it's done. The dashboard is optimized for viewing on mobile devices so you can check the forecast on your phone.
@@ -113,7 +113,7 @@ The URL at the top can be changed to show the weather forecast in any part of th
 
 To make the weather dashboard work for your location, you need a special URL from the [National Weather Service](https://www.weather.gov/documentation/services-web-api). To find your URL you'll need to know your latitude and longitude.
 
-1. Visit [maps.google.com](maps.google.com) and search for your location (or wherever you want your weather forecast). Right click on the location you want and you'll see a popup with the latitude and longitude. Click on the latitude and longitude to copy it to your clipboard.
+1. Visit [maps.google.com](https://maps.google.com) and search for your location (or wherever you want your weather forecast). Right click on the location you want and you'll see a popup with the latitude and longitude. Click on the latitude and longitude to copy it to your clipboard.
 
 ![Screenshot of Area 51 on Google Maps](../images/google_maps_get_lat_long.png)
 
