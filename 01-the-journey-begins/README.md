@@ -174,11 +174,15 @@ Next we'll rename the forecast panel on the dashboard.
 
 ![Screenshot of the Save Dashboard options, including a checkbox for default variable setting](../images/grafana_cloud_save_dashboard_2.png)
 
-5. Use the "Back to Dashboard" button to return to the dashboard view.
+6. Use the "Back to Dashboard" button to return to the dashboard view.
 
 ![Screenshot of the Back to Dashboard link](../images/grafana_cloud_back_to_dashboard.png)
 
-6. Congratulations, you completed the challenge!
+7. Click on the "Exit Edit" button to exit edit mode.
+
+![Screenshot of the Exit Edit button](../images/grafana_cloud_exit_edit.png)
+
+8. Congratulations, you completed the challenge!
 
 ![Screenshot of the renamed and updated dashboard](../images/grafana_cloud_area_51_weather.png)
 
