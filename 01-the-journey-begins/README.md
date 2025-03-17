@@ -174,9 +174,9 @@ Now that you have your API key, let's update the dashboard to use it.
 > - San%20Francisco,US
 > - Los%20Angeles,US
 
-## Step 6: Customize and Save Your Dashboard 💾
+## Step 6: Save Your Dashboard 💾
 
-Next we'll rename the forecast panel on the dashboard.
+Next we'll save the dashboard with your city's URL.
 
 1. Use the triple dot menu on the top right corner of the panel to select the **Edit** option.
 
