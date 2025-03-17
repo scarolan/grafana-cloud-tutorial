@@ -5,12 +5,12 @@ Welcome to the first step of your Grafana Cloud adventure! In this chapter, you'
 
 ![Screenshot of the default forecast panel for New York City](../images/grafana_cloud_nyc_weather_panel.png)
 
-This is a fun and interactive journey where you’ll:
+This is a fun and interactive journey where you'll:
 
 1. Sign up for Grafana Cloud.
-2. Enable the Infinity plugin and data source.
-3. Import a pre-configured weather dashboard.
-4. Use the National Weather Service API to pull in your local weather forecast.
+2. Get an OpenWeatherMap API key.
+3. Enable the Infinity plugin and data source.
+4. Import a pre-configured weather dashboard.
 5. Customize your dashboard to make it uniquely yours.
 
 Grab your gear, and let's begin!
@@ -19,7 +19,7 @@ Grab your gear, and let's begin!
 
 - [Grafana Cloud Account](https://grafana.com/auth/sign-up/create-user)
 - A modern browser (Chrome, Firefox, Edge, or Safari)
-- A [National Weather Service API](https://www.weather.gov/documentation/services-web-api) Gridpoint URL (we’ll help you find it!)
+- An [OpenWeatherMap API key](https://openweathermap.org/api)
 
 ## Step 1: Sign up for Grafana Cloud ☁️
 
@@ -45,9 +45,43 @@ Your first task is to sign up for a free Grafana Cloud account.
 > 
 > Bookmark your stack's URL for quick and easy reference later. Your stack URL looks like this: https://YOURSTACKNAME.grafana.net
 
-## Step 2: Enable the Infinity Plugin and Data Source ♾️
+## Step 2: Get an OpenWeatherMap API Key 🔑
 
-Next, you’ll enable a plugin that will help us pull in weather data from the US National Weather Service API.
+Before we set up Grafana, you'll need to get an API key from OpenWeatherMap to access weather data.
+
+1. Visit [OpenWeatherMap's signup page](https://home.openweathermap.org/users/sign_up)
+2. Fill out the registration form with:
+   - Username
+   - Email address
+   - Password
+
+3. Make sure to check the boxes for:
+   - "I am 16 years old and over"
+   - "I agree with Privacy Policy, Terms and conditions"
+
+4. You can optionally subscribe to their news and updates.
+
+5. Click "Create Account" and check your email for a verification link.
+
+6. After verifying your email, log into your account and go to the [API keys page](https://home.openweathermap.org/api_keys).
+
+7. You'll see a default API key already generated. You can use this key or create a new one by entering a name and clicking "Generate".
+
+![Screenshot of the OpenWeatherMap API keys page](../images/openweather_api_keys.png)
+
+8. Copy your API key and store it somewhere safe - you'll need it later when setting up the dashboard.
+
+> **⚠️ Important Notes:**
+> 
+> - The free API key has a limit of 60 calls per minute, which is plenty for personal use
+> - New API keys take a few hours to activate after creation
+> - Keep your API key private - don't share it publicly
+
+**You may need to pause the tutorial and come back in a few hours.** OpenWeatherMap can take up to 3 hours to activate new API keys. Now that you have your API key, let's set up the tools we'll need in Grafana Cloud.
+
+## Step 3: Enable the Infinity Plugin and Data Source ♾️
+
+Next, you'll enable a plugin that will help us pull in weather data from the OpenWeatherMap API.
 
 1. In your Grafana Cloud stack, click on the **Connections >> Add New Connection** menu option on the left sidebar.
 
@@ -81,7 +115,7 @@ Next, you’ll enable a plugin that will help us pull in weather data from the U
 
 ![Screenshot of the default settings for the Infinity data source](../images/grafana_cloud_installed_infinity_datasource.png)
 
-## Step 3: Import the Weather Dashboard 📝
+## Step 4: Import the Weather Dashboard 📝
 
 Now that your Infinity data source is ready, it's time to import the weather dashboard.
 
@@ -97,62 +131,48 @@ Now that your Infinity data source is ready, it's time to import the weather das
 
 ![Screenshot of the Grafana Cloud JSON for the weather dashboard](../images/grafana_cloud_copypasta_json.png)
 
-4. During the import process, you will be prompted to select a data source. Choose the Infinity data source that you created in Step 2.
+4. During the import process, you will be prompted to select a data source. Choose the Infinity data source that you created in Step 4.
 
 ![Screenshot of the select data source pulldown](../images/grafana_cloud_select_datasource.png)
 
 5. Click **Import** to load the dashboard.
 
-6. Great work, now you have the default weather forecast dashboard for New York City.
+6. Great work, now you have the default weather forecast dashboard. It will appear broken until you fill in your OpenWeatherMap URL at the top of the dashboard.
 
-![Screenshot of the default forecast panel for New York City](../images/grafana_cloud_nyc_weather_dashboard.png)
+![Screenshot of the unconfigured forecast panel](../images/grafana_cloud_nyc_weather_dashboard.png)
 
-The URL at the top can be changed to show the weather forecast in any part of the United States. In the next step you'll find your local station URL and update the dashboard.
+The URL at the top can be changed to show the weather forecast in any city in the world. In the next step you'll create your OpenWeatherMap forecast URL for your city.
 
-## Step 4: Get Your Weather API URL ⚙️
+## Step 5: Update the Dashboard with Your Weather Settings 🗺️
 
-To make the weather dashboard work for your location, you need a special URL from the [National Weather Service](https://www.weather.gov/documentation/services-web-api). To find your URL you'll need to know your latitude and longitude.
+Now that you have your API key, let's update the dashboard to use it.
 
-1. Visit [maps.google.com](https://maps.google.com) and search for your location (or wherever you want your weather forecast). Right click on the location you want and you'll see a popup with the latitude and longitude. Click on the latitude and longitude to copy it to your clipboard.
+1. Open the weather dashboard you imported in the previous step.
 
-![Screenshot of Area 51 on Google Maps](../images/google_maps_get_lat_long.png)
+2. At the top of the dashboard, you'll need to construct your OpenWeatherMap API URL:
+   - Start with: `https://api.openweathermap.org/data/2.5/forecast?`
+   - Add your city name with spaces replaced by %20 (e.g., "San Francisco" becomes "San%20Francisco")
+   - Add the country code: `,US`
+   - Add units and your API key
+   - Units can be 'imperial' or 'metric'
+   
+   Your final URL should look like this. You can copy this URL and simply replace the city, country code and API key:
+   ```
+   https://api.openweathermap.org/data/2.5/forecast?q=San%20Francisco,US&units=imperial&appid=YOUR_API_KEY_HERE
+   ```
 
-2. Open a new browser tab and type in this URL but don't hit enter yet!
+3. Paste your constructed URL into the URL field at the top of the dashboard.
 
-```
-https://api.weather.gov/points/
-```
 
-3. Right after the final slash, paste in the latitude and longitude you got from Google Maps.
+5. The weather forecast will update automatically once you enter your URL.
 
-> **⚠️ Important!**
+> **🪄 Protip:**
 > 
-> There's a space after the comma that you must delete for the URL to work!
-
-![Screenshot of the weather.gov API points URL](../images/weather_gov_points_url.png)
-
-The final URL you end up at rounds the latitude and longitude to 4 digits. It will look like this:
-
-```
-https://api.weather.gov/points/42.5704,-73.6885
-```
-
-4. This JSON response contains data about your nearest detected NWS station. Scroll down until you see the "forecast" key under "properties":
-
-![Screenshot of the api.weather.gov forecast URL](../images/weather_gov_forecast_url.png)
-
-5. Copy the forecast URL for the next step.
-
-## Step 5: Update the Dashboard with Your Weather URL 🗺️
-
-Now that you have your gridpoint URL, let's update the dashboard to use it.
-
-1. Open the weather dashboard you imported earlier.
-2. At the top of the dashboard there's a text box with a URL in it. Replace it with your own forecast URL:
-
-![Screenshot of the Grafana Cloud forecast URL variable text box](../images/grafana_cloud_paste_weather_url.png)
-
-3. Notice how the weather forecast changes once you paste in the new URL.
+> Common city formats:
+> - New%20York,US
+> - London,UK
+> - San%20Francisco,US
+> - Los%20Angeles,US
 
 ## Step 6: Customize and Save Your Dashboard 💾
 
@@ -162,44 +182,37 @@ Next we'll rename the forecast panel on the dashboard.
 
 ![Screenshot of the Grafana Cloud edit panel menu](../images/grafana_cloud_edit_panel.png)
 
-2. On the right side you'll see all your panel options. Update the panel's title to your own location.
+2. Save the dashboard with the button at the top of the page. **make sure you select the checkbox to update your forecast default location**.
 
-![Screenshot of the Grafana Cloud panel being renamed](../images/grafana_cloud_rename_panel.png)
+![Screenshot of the Save Dashboard options, including a checkbox for default variable setting](../images/grafana_cloud_save_dashboard.png)
 
-3. Save the dashboard with the button at the top of the page.
-
-![Screenshot of the Grafana Cloud save dashboard button](../images/grafana_cloud_save_dashboard.png)
-
-4. Add a note and make sure you select the checkbox to update your forecast default location.
-
-![Screenshot of the Save Dashboard options, including a checkbox for default variable setting](../images/grafana_cloud_save_dashboard_2.png)
-
-6. Use the "Back to Dashboard" button to return to the dashboard view.
+4. Use the "Back to Dashboard" button to return to the dashboard view.
 
 ![Screenshot of the Back to Dashboard link](../images/grafana_cloud_back_to_dashboard.png)
 
-7. Click on the "Exit Edit" button to exit edit mode.
+5. Click on the "Exit Edit" button to exit edit mode.
 
 ![Screenshot of the Exit Edit button](../images/grafana_cloud_exit_edit.png)
 
-8. Congratulations, you completed the challenge!
+6. Congratulations, you completed the challenge!
 
-![Screenshot of the renamed and updated dashboard](../images/grafana_cloud_area_51_weather.png)
+![Screenshot of the renamed and updated dashboard](../images/grafana_cloud_finished_panel.png)
 
 ## Step 7: Enjoy Your Custom Weather Forecast 🍾
 
-You’ve completed your first challenge! Now, any time you want to check the weather, your magical forecast dashboard is just a click away.
+You've completed your first challenge! Now, any time you want to check the weather, your magical forecast dashboard is just a click away.
 
 > **🪄 Protip:**
 > 
 > Log onto your Grafana Cloud stack with your mobile device and add a bookmark to your home screen for quick access to your dashboard!
 
-Congratulations, hero! You’ve learned how to:
+Congratulations, hero! You've learned how to:
 
 - Sign up for Grafana Cloud.
+- Get and configure an OpenWeatherMap API key.
 - Enable a plugin and set up a data source.
 - Import and customize a dashboard.
-- Use the National Weather Service API to pull in live data.
+- Use the OpenWeatherMap API to pull in live weather data.
 
 Your journey is just beginning. Next up, you'll face your first true trial: **monitoring a Linux server**. 
 
