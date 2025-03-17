@@ -154,7 +154,7 @@ Now that you have your API key, let's update the dashboard to use it.
    - Add your city name with spaces replaced by %20 (e.g., "San Francisco" becomes "San%20Francisco")
    - Add the country code: `,US`
    - Add units and your API key
-   - Units can be 'imperial' (°F) or 'metric' (°C). This must match the dashboard file you imported!
+   - Units can be imperial (°F) or metric (°C). This must match the dashboard file you imported!
    
    Your final URL should look similar to this. You can copy this URL and simply replace the city, country code and API key:
    ```
