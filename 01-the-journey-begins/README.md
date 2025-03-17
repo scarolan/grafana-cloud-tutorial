@@ -127,7 +127,7 @@ Now that your Infinity data source is ready, it's time to import the weather das
 
 ![Screenshot of the Grafana Cloud Import Dashboard button](../images/grafana_cloud_import_dashboard.png)
 
-3. Upload the [weather-forecast.json](./weather-forecast.json) file that you can find in the 01-the-journey-begins folder of this repository. You may copy and paste the JSON or upload the entire file.
+3. Upload the [weather-forecast-f.json](./weather-forecast-f.json) or [weather-forecast-c.json](./weather-forecast-c.json) file that you can find in the 01-the-journey-begins folder of this repository. You may copy and paste the JSON or upload the entire file. The only difference between these dashboards is the temperature unit (F or C).
 
 ![Screenshot of the Grafana Cloud JSON for the weather dashboard](../images/grafana_cloud_copypasta_json.png)
 
@@ -154,9 +154,9 @@ Now that you have your API key, let's update the dashboard to use it.
    - Add your city name with spaces replaced by %20 (e.g., "San Francisco" becomes "San%20Francisco")
    - Add the country code: `,US`
    - Add units and your API key
-   - Units can be 'imperial' or 'metric'
+   - Units can be 'imperial' (°F) or 'metric' (°C). This must match the dashboard file you imported!
    
-   Your final URL should look like this. You can copy this URL and simply replace the city, country code and API key:
+   Your final URL should look similar to this. You can copy this URL and simply replace the city, country code and API key:
    ```
    https://api.openweathermap.org/data/2.5/forecast?q=San%20Francisco,US&units=imperial&appid=YOUR_API_KEY_HERE
    ```
