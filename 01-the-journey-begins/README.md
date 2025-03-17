@@ -19,7 +19,7 @@ Grab your gear, and let's begin!
 
 - [Grafana Cloud Account](https://grafana.com/auth/sign-up/create-user)
 - A modern browser (Chrome, Firefox, Edge, or Safari)
-- An [OpenWeatherMap API key](https://openweathermap.org/api)
+- An [OpenWeatherMap API key](https://home.openweathermap.org/api_keys)
 
 ## Step 1: Sign up for Grafana Cloud ☁️
 
