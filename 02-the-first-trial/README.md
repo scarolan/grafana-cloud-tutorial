@@ -1,5 +1,5 @@
 
-# 🛍 The First Trial – Monitor a Linux Server
+# 🔭 The First Trial – Monitor a Linux Server
 
 Welcome to your first technical trial, brave observer. In this chapter, you’ll learn how to instrument and monitor an Ubuntu Linux VM using the **Grafana Alloy agent**. Let’s begin your path toward observability mastery.
 
