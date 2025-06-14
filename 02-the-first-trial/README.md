@@ -11,9 +11,9 @@ Welcome to your first technical trial, brave observer. In this chapter, you’ll
 
 Before you set off, make sure you’ve gathered the following gear:
 
-- A **Grafana Cloud Free Tier** account – [Sign up here](https://grafana.com/auth-sign-up/create-user)
-- A modern browser – Chrome, Firefox, Edge, or Safari
-- An Ubuntu Linux VM – use [Killercoda](https://killercoda.com/scarolan/scenario/grafana-lab) or set one up via [VirtualBox](../00-prepare-your-equipment/README.md)
+- A **Grafana Cloud Free Tier** account – <a href="https://grafana.com/auth-sign-up/create-user" target="_blank">Sign up here</a>
+- A modern browser – Chrome, Firefox, Edge, or Safari  
+- An Ubuntu Linux VM – use <a href="https://killercoda.com/scarolan/scenario/grafana-lab" target="_blank">Killercoda</a> or set one up via <a href="../00-prepare-your-equipment/README.md" target="_blank">VirtualBox</a>
 
 ---
 
